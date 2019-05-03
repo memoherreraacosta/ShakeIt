@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tRestACLI"
+        android:layout_width="206dp"
+        android:layout_height="67dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="100dp"
+        android:text=""
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <TextView
+        android:id="@+id/tPromACLI"
+        android:layout_width="252dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="118dp"
+        android:text=""
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <TextView
+        android:id="@+id/tLatACLI"
+        android:layout_width="140dp"
+        android:layout_height="43dp"
+        android:layout_alignStart="@+id/tPromACLI"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-6dp"
+        android:layout_marginBottom="220dp"
+        android:text=""
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/tLonACLI"
+        android:layout_width="144dp"
+        android:layout_height="37dp"
+        android:layout_alignEnd="@+id/bMapACLI"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="201dp"
+        android:layout_marginEnd="-22dp"
+        android:text=""
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <Button
+        android:id="@+id/bMapACLI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-252dp"
+        android:layout_marginTop="388dp"
+        android:layout_toEndOf="@+id/tPromACLI"
+        android:onClick="changeMap"
+        android:text="Ver en Mapa"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="321dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-341dp"
+        android:layout_toStartOf="@+id/tLonACLI" />
+
+</android.widget.RelativeLayout>

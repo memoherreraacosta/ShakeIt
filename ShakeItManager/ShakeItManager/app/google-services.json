@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "283500227511",
+    "firebase_url": "https://shakeit-79c7a.firebaseio.com",
+    "project_id": "shakeit-79c7a",
+    "storage_bucket": "shakeit-79c7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283500227511:android:64693095270f8504",
+        "android_client_info": {
+          "package_name": "mx.itesm.shakeit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283500227511-0ntqjh8uo064ume3vgvdlpjkn8k2uoek.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.itesm.shakeit",
+            "certificate_hash": "4e6ef52049f7b4d73df00320ff3ce9f0dc2a8773"
+          }
+        },
+        {
+          "client_id": "283500227511-3v4jdbil84nvbn65hbcgnvsmlqd275bu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJUjI2Ox18UrjZfUMy8wGa1TeroMX-CdU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283500227511-3v4jdbil84nvbn65hbcgnvsmlqd275bu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

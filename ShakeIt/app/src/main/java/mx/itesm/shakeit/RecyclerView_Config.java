@@ -1,10 +1,13 @@
 package mx.itesm.shakeit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Button;
@@ -30,7 +33,7 @@ public class RecyclerView_Config {
         private Button bMap;
         private String key;
 
-        public String resName, promo, lati, longi;
+        public String resName, promo, lati, longi,cupID;
 
         public CuponItemView(final ViewGroup parent){
             super(LayoutInflater.from(mContext).inflate(R.layout.activity_cupon_list_item2, parent, false));
@@ -44,15 +47,27 @@ public class RecyclerView_Config {
         }
 
         public void bind(Cupon cupon, String key, Location location){
+
             this.resName = cupon.getInformacion();
             this.promo = location.getRestaurante();
             this.lati = location.getLatitud()+"";
             this.longi = location.getLongitud()+"";
+            this.cupID = cupon.getId();
 
             rest.setText(this.resName);
             nombre.setText(this.promo);
             lat.setText(this.lati);
             lng.setText(this.longi);
+
+
+            String msj = "Name : "+this.resName+
+                    " Prom :"+this.promo+
+                    " Lat :"+this.lati+
+                    " Log :"+this.longi+
+                    " ID :"+this.cupID;
+
+            Log.wtf("Mensajito ",msj);
+
             this.key = key;
         }
     }

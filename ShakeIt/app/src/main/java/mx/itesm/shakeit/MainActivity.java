@@ -16,7 +16,9 @@ import com.github.tbouron.shakedetector.library.ShakeDetector;
 
 public class MainActivity extends Activity{
     private TextView tvHello;
-    private Button bCupones;
+    private Button bCupones, bShare;
+    private Intent intent;
+    private String shareBody = "Prueba la app ShakeIt para poder obtener descuentos. Descargala en www.linkparadescargarshakeit.com";
     private SensorManager sensorMgr;
 
     @Override
@@ -38,6 +40,18 @@ public class MainActivity extends Activity{
                 Intent i = new Intent(MainActivity.this, CuponListItem.class);
                 // Intent i = new Intent(MainActivity.this, ListaCupones.class);
                 startActivity(i);
+            }
+        });
+
+        bShare = findViewById(R.id.bShare);
+        bShare.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(android.content.Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "My App");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(intent, "Share via"));
             }
         });
 
